@@ -1,0 +1,2 @@
+class HumanDAODoesNotExistException(Exception):
+    pass

@@ -1,0 +1,129 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "description": "Strannik",
+    "version": "0.0.2",
+    "title": "Service",
+    "license": {
+      "name": "Лицензия? О таких не слышали"
+    }
+  },
+  "paths": {
+    "/humans/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id is not required",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "tags": [
+          "Humans"
+        ],
+        "summary": "Returns Human",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id is not required",
+            "required": true,
+            "type": "string"
+
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "id is not required",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+                }
+              }
+
+          }
+        ],
+        "tags": [
+          "Humans"
+        ],
+        "summary": "Edit Human",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id is not required",
+            "required": true,
+            "type": "string"
+
+          }
+        ],
+        "tags": [
+          "Humans"
+        ],
+        "summary": "Delete Human",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/humans/": {
+      "get": {
+        "tags": [
+          "Humans"
+        ],
+        "summary": "Returns All Humans",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "name, surname, birth_date, gender, address",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+                }
+              }
+
+          }
+        ],
+        "tags": [
+          "Humans"
+        ],
+        "summary": "Append Human",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

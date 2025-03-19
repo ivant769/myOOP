@@ -1,0 +1,2 @@
+class HumanValueException(Exception):
+    pass
